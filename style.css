@@ -1,16 +1,17 @@
-* {
+/* General Reset and Flex Setup */
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
+  display: flex;
+  flex-direction: column;
   font-family: 'Poppins', sans-serif;
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
 }
 
+/* Header/Nav */
 header {
   background: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -32,7 +33,7 @@ nav {
 
 .logo {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .nav-links {
@@ -53,11 +54,20 @@ nav {
   color: #0077b6;
 }
 
+/* Hero Section */
+main {
+  flex: 1; /* This allows main content to push footer down */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
 #hero {
-  margin-top: 100px;
-  padding: 4rem 2rem;
   text-align: center;
+  padding: 4rem 2rem;
   background-color: #e0f7fa;
+  width: 100%;
 }
 
 #hero h1 {
@@ -83,15 +93,15 @@ nav {
   background-color: #023e8a;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem 1rem;
   background: #333;
   color: white;
-  margin-top: 2rem;
 }
 
-/* 👇 Responsive Fix */
+/* Responsive Design */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
