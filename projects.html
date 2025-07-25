@@ -4,7 +4,135 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects | Melkzedek</title>
-  <link rel="stylesheet" href="style.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    main {
+      flex: 1;
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 300px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: auto;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -22,26 +150,26 @@
   </header>
 
   <main>
-    <section class="content-section">
-      <h1>My Projects</h1>
-      <div class="project">
+    <h1>My Projects</h1>
+    <div class="card-container">
+      <div class="card">
         <h3>🅰️ Vehicle Maintenance Tracker</h3>
         <p>A web app that helps users log their vehicle service history and get reminders. Built with React and Express.</p>
         <a href="https://github.com/yourusername/vehicle-maintenance" target="_blank">View on GitHub</a>
       </div>
 
-      <div class="project">
+      <div class="card">
         <h3>📊 Voting System</h3>
         <p>An online voting system with secure login, 2-step verification, and real-time results. MongoDB + Node.js stack.</p>
         <a href="https://github.com/yourusername/voting-system" target="_blank">View on GitHub</a>
       </div>
 
-      <div class="project">
+      <div class="card">
         <h3>📦 Parking Spot Finder</h3>
         <p>Helps users locate available parking in real-time using user location. Built using MERN Stack.</p>
         <a href="https://github.com/yourusername/parking-finder" target="_blank">View on GitHub</a>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer>
