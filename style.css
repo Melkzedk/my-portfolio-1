@@ -53,6 +53,16 @@ nav {
 .nav-links a:hover {
   color: #0077b6;
 }
+.nav-links li a {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between icon and text */
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #007bff; /* or your primary color */
+}
 
 /* Hero Section */
 main {
