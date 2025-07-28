@@ -7,24 +7,117 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #1a1a1a;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+        border-left: 1px solid #333;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+        color: white;
+      }
+    }
+
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .btn {
+      padding: 0.7rem 1.5rem;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    footer {
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
 
   <header>
-  <nav>
-    <div class="logo"><i class="fas fa-user-astronaut"></i> Melkzedek</div>
-    <ul class="nav-links">
-      <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
-      <li><a href="about.html"><i class="fas fa-user"></i> ABOUT</a></li>
-      <li><a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a></li>
-      <li><a href="education.html"><i class="fas fa-graduation-cap"></i> EDUCATION</a></li>
-      <li><a href="interest.html"><i class="fas fa-star"></i> INTERESTS</a></li>
-      <li><a href="contact.html"><i class="fas fa-envelope"></i> CONTACT</a></li>
-    </ul>
-  </nav>
-</header>
-
+    <nav>
+      <div class="logo">
+        <i class="fas fa-user-astronaut"></i> Melkzedek
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> ABOUT</a></li>
+        <li><a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a></li>
+        <li><a href="education.html"><i class="fas fa-graduation-cap"></i> EDUCATION</a></li>
+        <li><a href="interest.html"><i class="fas fa-star"></i> INTERESTS</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <section id="hero">
@@ -37,6 +130,13 @@
   <footer>
     <p>© 2025 Melkzedek | All rights reserved</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
