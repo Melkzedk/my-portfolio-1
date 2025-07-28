@@ -13,7 +13,7 @@ html, body {
 
 /* Header/Nav */
 header {
-  background: #fff;
+  background: #fff; /* Preserve white background */
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   position: fixed;
   top: 0;
@@ -36,37 +36,33 @@ nav {
   font-weight: 600;
 }
 
+/* Nav Links */
 .nav-links {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  padding: 0;
+  margin: 0;
 }
 
-.nav-links a {
+.nav-links li a {
   text-decoration: none;
   color: #333;
-  padding: 0.5rem;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #0077b6;
-}
-.nav-links li a {
   display: flex;
   align-items: center;
-  gap: 8px; /* space between icon and text */
+  gap: 8px;
+  padding: 0.5rem;
   transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #007bff; /* or your primary color */
+  color: #0077b6; /* Your brand color */
 }
 
 /* Hero Section */
 main {
-  flex: 1; /* This allows main content to push footer down */
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
