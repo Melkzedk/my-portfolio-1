@@ -13,7 +13,7 @@ html, body {
 
 /* Header/Nav */
 header {
-  background: #fff; /* Preserve white background */
+  background: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   position: fixed;
   top: 0;
@@ -57,7 +57,40 @@ nav {
 }
 
 .nav-links li a:hover {
-  color: #0077b6; /* Your brand color */
+  color: #0077b6;
+}
+
+/* Dropdown Toggle Icons */
+.nav-links li a svg {
+  transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover svg {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  background-color: #f1f1f1;
+  padding-left: 1rem;
+}
+
+.nav-item.open .dropdown-content {
+  max-height: 500px;
+}
+
+/* Dropdown Links */
+.dropdown-content li a {
+  font-size: 0.95rem;
+  padding-left: 1.5rem;
+  color: #333;
+}
+
+.dropdown-content li a:hover {
+  color: #0077b6;
 }
 
 /* Hero Section */
