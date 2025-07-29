@@ -1,257 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Melkzedek | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melkzedek | Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
 
-    header {
-      background: #1a1a1a;
-      color: white;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .nav-links li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .hamburger {
-      display: none;
-      font-size: 1.8rem;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
+      header {
         background: #1a1a1a;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 200px;
-        padding: 1rem;
-        border-left: 1px solid #333;
-      }
-
-      .nav-links.show {
-        display: flex;
-      }
-
-      .hamburger {
-        display: block;
         color: white;
       }
 
-      .hero-text {
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .hamburger {
+        display: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          background: #1a1a1a;
+          position: absolute;
+          top: 70px;
+          right: 0;
+          width: 200px;
+          padding: 1rem;
+          border-left: 1px solid #333;
+        }
+
+        .nav-links.show {
+          display: flex;
+        }
+
+        .hamburger {
+          display: block;
+          color: white;
+        }
+
+        .hero-text {
+          text-align: center;
+        }
+      }
+
+      main {
+        padding: 2rem;
         text-align: center;
       }
-    }
 
-    main {
-      padding: 2rem;
-      text-align: center;
-    }
+      .btn {
+        padding: 0.7rem 1.5rem;
+        background: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 1rem;
+      }
 
-    .btn {
-      padding: 0.7rem 1.5rem;
-      background: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 1rem;
-    }
+      footer {
+        background: #1a1a1a;
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem;
+      }
 
-    footer {
-      background: #1a1a1a;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
 
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
+      .footer-column h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        color: #f0f0f0;
+      }
 
-    .footer-column h3 {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      color: #f0f0f0;
-    }
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+      }
 
-    .footer-column ul {
-      list-style: none;
-      padding: 0;
-    }
+      .footer-column ul.quick-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
 
-    .footer-column ul.quick-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
+      .footer-column ul.quick-links li {
+        flex: 1 1 30%;
+      }
 
-    .footer-column ul.quick-links li {
-      flex: 1 1 30%;
-    }
+      .footer-column ul li a {
+        color: #bbb;
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
 
-    .footer-column ul li a {
-      color: #bbb;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
+      .footer-column ul li a:hover {
+        color: #fff;
+      }
 
-    .footer-column ul li a:hover {
-      color: #fff;
-    }
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
 
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
+      .social-icons a {
+        color: #bbb;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
 
-    .social-icons a {
-      color: #bbb;
-      font-size: 1.2rem;
-      transition: color 0.3s;
-    }
+      .social-icons a:hover {
+        color: #fff;
+      }
 
-    .social-icons a:hover {
-      color: #fff;
-    }
+      /* Added styles for hero layout */
+      .hero-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
 
-    /* Added styles for hero layout */
-    .hero-container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
+      .hero-text {
+        flex: 1 1 400px;
+        text-align: left;
+      }
 
-    .hero-text {
-      flex: 1 1 400px;
-      text-align: left;
-    }
+      .hero-image {
+        flex: 1 1 300px;
+        text-align: center;
+      }
 
-    .hero-image {
-      flex: 1 1 300px;
-      text-align: center;
-    }
-
-    .hero-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <nav>
-      <div class="logo">
-        <i class="fas fa-user-astronaut"></i> Melkzedek
-      </div>
-      <div class="hamburger" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
-        <li><a href="about.html"><i class="fas fa-user"></i> ABOUT</a></li>
-        <li><a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a></li>
-        <li><a href="education.html"><i class="fas fa-graduation-cap"></i> EDUCATION</a></li>
-        <li><a href="interest.html"><i class="fas fa-star"></i> INTERESTS</a></li>
-        <li><a href="contact.html"><i class="fas fa-envelope"></i> CONTACT</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="hero">
-      <div class="hero-container">
-        <div class="hero-text">
-          <h1>Hi, I'm Melkzedek 👋</h1>
-          <p>Passionate Developer | Tech Enthusiast</p>
-          <a href="assets/resume.pdf" download class="btn">Download CV</a>
+      .hero-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo"><i class="fas fa-user-astronaut"></i> Melkzedek</div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
         </div>
-        <div class="hero-image">
-          <img src="Assets/imagetest.png" alt="Melkzedek" />
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul class="quick-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="interest.html">Interests</a></li>
-          <li><a href="contact.html">Contact</a></li>
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+          </li>
+          <li>
+            <a href="about.html"><i class="fas fa-user"></i> ABOUT</a>
+          </li>
+          <li>
+            <a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a>
+          </li>
+          <li>
+            <a href="education.html"
+              ><i class="fas fa-graduation-cap"></i> EDUCATION</a
+            >
+          </li>
+          <li>
+            <a href="interest.html"><i class="fas fa-star"></i> INTERESTS</a>
+          </li>
+          <li>
+            <a href="contact.html"><i class="fas fa-envelope"></i> CONTACT</a>
+          </li>
         </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Follow Me</h3>
-        <div class="social-icons">
-          <a href="https://github.com/your-username" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://twitter.com/your-handle" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="mailto:your@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero">
+        <div class="hero-container">
+          <div class="hero-text">
+            <h1>Hi, I'm Melkzedek 👋</h1>
+            <p>Passionate Developer | Tech Enthusiast</p>
+            <a href="assets/resume.pdf" download class="btn">Download CV</a>
+          </div>
+          <div class="image-wrapper">
+            <img src="Assets/imagetest.png" alt="Hero Image" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="quick-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="interest.html">Interests</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Me</h3>
+          <div class="social-icons">
+            <a
+              href="https://github.com/your-username"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://linkedin.com/in/your-profile"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://twitter.com/your-handle"
+              target="_blank"
+              aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="mailto:your@email.com" aria-label="Email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
         </div>
       </div>
-    </div>
-    <p style="margin-top: 2rem;">© 2025 Melkzedek | All rights reserved</p>
-  </footer>
+      <p style="margin-top: 2rem">© 2025 Melkzedek | All rights reserved</p>
+    </footer>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      nav.classList.toggle("show");
-    }
-  </script>
-
-</body>
+    <script>
+      function toggleMenu() {
+        const nav = document.getElementById("navLinks");
+        nav.classList.toggle("show");
+      }
+    </script>
+  </body>
 </html>
