@@ -5,20 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Interests | Melkzedek</title>
   <link rel="stylesheet" href="style.css"/>
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <nav>
-      <div class="logo">Melkzedek</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="interest.html">Interests</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+      <nav>
+        <div class="logo"><i class="fas fa-user-astronaut"></i> My PortFolio</div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+          </li>
+          <li>
+            <a href="about.html"><i class="fas fa-user"></i> ABOUT</a>
+          </li>
+          <li>
+            <a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a>
+          </li>
+          <li>
+            <a href="education.html"
+              ><i class="fas fa-graduation-cap"></i> EDUCATION</a
+            >
+          </li>
+          <li>
+            <a href="interest.html"><i class="fas fa-star"></i> INTERESTS</a>
+          </li>
+          <li>
+            <a href="contact.html"><i class="fas fa-envelope"></i> CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
   <main>
     <section class="content-section">
