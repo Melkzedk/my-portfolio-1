@@ -14,15 +14,15 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    body {
+    body, html {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
     }
 
     header {
       background-color: #000;
-      color: #fff;
+      color: white;
     }
 
     nav {
@@ -34,45 +34,39 @@
     }
 
     .logo {
-      font-size: 1.8rem;
-      font-weight: 600;
+      font-size: 24px;
+      font-weight: bold;
     }
 
     .nav-links {
-      display: flex;
-      gap: 20px;
       list-style: none;
+      display: flex;
+      flex-wrap: wrap;
     }
 
-    .nav-links li a {
-      color: #fff;
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a {
       text-decoration: none;
+      color: white;
       font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00bcd4;
+    }
+
+    .nav-links i {
+      margin-right: 6px;
     }
 
     .hamburger {
       display: none;
-      font-size: 1.5rem;
+      font-size: 24px;
       cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #000;
-        margin-top: 10px;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .hamburger {
-        display: block;
-        color: #fff;
-      }
     }
 
     main {
@@ -85,36 +79,48 @@
       margin: auto;
     }
 
-    h1, h2 {
-      color: #333;
-    }
-
     .btn {
       display: inline-block;
       margin-top: 20px;
       padding: 10px 20px;
       background-color: #007bff;
-      color: #fff;
+      color: white;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
     }
 
     footer {
       background-color: #000;
-      color: #fff;
+      color: white;
       text-align: center;
-      padding: 15px 10px;
+      padding: 15px;
     }
 
-    footer .social-icons {
-      margin-top: 10px;
-    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 10px;
+      }
 
-    .social-icons a {
-      color: #fff;
-      margin: 0 8px;
-      text-decoration: none;
-      font-size: 1.2rem;
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      .hamburger {
+        display: block;
+      }
     }
   </style>
 </head>
@@ -126,12 +132,12 @@
         <i class="fas fa-bars"></i>
       </div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="interest.html">Interests</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i>About</a></li>
+        <li><a href="projects.html"><i class="fas fa-code"></i>Projects</a></li>
+        <li><a href="education.html"><i class="fas fa-graduation-cap"></i>Education</a></li>
+        <li><a href="interest.html"><i class="fas fa-heart"></i>Interests</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -153,18 +159,12 @@
 
   <footer>
     <p>© 2025 Melkzedek | All rights reserved</p>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#"><i class="fab fa-github"></i></a>
-    </div>
   </footer>
 
   <script>
     function toggleMenu() {
-      const navLinks = document.getElementById("navLinks");
-      navLinks.classList.toggle("active");
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('show');
     }
   </script>
 </body>
