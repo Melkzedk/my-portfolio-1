@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Education | Melkzedek</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -21,37 +21,33 @@
     }
 
     header {
-      background-color: #007bff;
-      color: white;
-      padding: 1rem 2rem;
+      background-color: #000;
+      color: #fff;
     }
 
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 15px 30px;
       flex-wrap: wrap;
     }
 
     .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
+      font-size: 1.8rem;
+      font-weight: 600;
     }
 
     .nav-links {
       display: flex;
+      gap: 20px;
       list-style: none;
-      gap: 1.2rem;
     }
 
     .nav-links li a {
-      color: white;
+      color: #fff;
       text-decoration: none;
       font-weight: 500;
-    }
-
-    .nav-links li a i {
-      margin-right: 5px;
     }
 
     .hamburger {
@@ -60,33 +56,13 @@
       cursor: pointer;
     }
 
-    .content-section {
-      flex: 1;
-      padding: 2rem;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: #007bff;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    footer {
-      background-color: #f0f0f0;
-      text-align: center;
-      padding: 1rem;
-      margin-top: auto;
-    }
-
     @media (max-width: 768px) {
       .nav-links {
+        display: none;
         flex-direction: column;
         width: 100%;
-        display: none;
+        background-color: #000;
+        margin-top: 10px;
       }
 
       .nav-links.active {
@@ -95,7 +71,50 @@
 
       .hamburger {
         display: block;
+        color: #fff;
       }
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+    }
+
+    .content-section {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 15px 10px;
+    }
+
+    footer .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 8px;
+      text-decoration: none;
+      font-size: 1.2rem;
     }
   </style>
 </head>
@@ -107,12 +126,12 @@
         <i class="fas fa-bars"></i>
       </div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="about.html"><i class="fas fa-user"></i>About</a></li>
-        <li><a href="projects.html"><i class="fas fa-code"></i>Projects</a></li>
-        <li><a href="education.html"><i class="fas fa-graduation-cap"></i>Education</a></li>
-        <li><a href="interest.html"><i class="fas fa-heart"></i>Interests</a></li>
-        <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="interest.html">Interests</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -134,12 +153,18 @@
 
   <footer>
     <p>© 2025 Melkzedek | All rights reserved</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
   </footer>
 
   <script>
     function toggleMenu() {
-      const nav = document.getElementById('navLinks');
-      nav.classList.toggle('active');
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
     }
   </script>
 </body>
