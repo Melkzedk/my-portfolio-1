@@ -114,8 +114,15 @@
       padding: 0;
     }
 
-    .footer-column ul li {
-      margin-bottom: 0.5rem;
+    .footer-column ul.quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .footer-column ul.quick-links li {
+      flex: 1 1 30%;
     }
 
     .footer-column ul li a {
@@ -179,7 +186,7 @@
     <div class="footer-grid">
       <div class="footer-column">
         <h3>Quick Links</h3>
-        <ul>
+        <ul class="quick-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
