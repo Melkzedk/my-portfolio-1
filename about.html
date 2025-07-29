@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | Melkzedek</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     * {
       margin: 0;
@@ -22,6 +24,7 @@
     header {
       background-color: #1a1a1a;
       color: white;
+      position: relative;
     }
 
     .navbar {
@@ -36,10 +39,19 @@
       font-weight: 600;
     }
 
+    .logo i {
+      margin-right: 0.5rem;
+      color: #007bff;
+    }
+
     .menu-toggle {
       display: none;
       font-size: 1.8rem;
       cursor: pointer;
+    }
+
+    .menu-toggle i {
+      color: white;
     }
 
     .nav-links {
@@ -54,11 +66,15 @@
       font-weight: 500;
     }
 
+    .nav-links li a i {
+      margin-right: 0.5rem;
+      color: #007bff;
+    }
+
     .nav-links li a:hover {
       color: #007bff;
     }
 
-    /* Mobile styles */
     @media (max-width: 768px) {
       .menu-toggle {
         display: block;
@@ -71,8 +87,9 @@
         position: absolute;
         top: 70px;
         right: 0;
-        width: 200px;
+        width: 220px;
         padding: 1rem;
+        z-index: 10;
       }
 
       .nav-links.active {
@@ -111,6 +128,10 @@
       margin-top: 1rem;
     }
 
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -118,6 +139,7 @@
       color: white;
     }
   </style>
+
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
       const menuToggle = document.querySelector(".menu-toggle");
@@ -133,14 +155,15 @@
 
   <header>
     <nav class="navbar">
-      <div class="logo">My PortFolio</div>
-      <div class="menu-toggle">&#9776;</div>
+      <div class="logo"><i class="fas fa-user-astronaut"></i> My PortFolio</div>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="interest.html">Interests</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> ABOUT</a></li>
+        <li><a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a></li>
+        <li><a href="education.html"><i class="fas fa-graduation-cap"></i> EDUCATION</a></li>
+        <li><a href="interest.html"><i class="fas fa-star"></i> INTERESTS</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> CONTACT</a></li>
       </ul>
     </nav>
   </header>
@@ -153,7 +176,7 @@
       <h2>Educational Background</h2>
       <p>I pursued a degree in Information and Communication Technology where I built a strong foundation in programming, networking, and system design. I also take online courses to keep my knowledge current with industry trends.</p>
 
-      <a href="assets/resume.pdf" download class="btn">Download My CV</a>
+      <a href="assets/resume.pdf" download class="btn"><i class="fas fa-download"></i> Download My CV</a>
     </section>
   </main>
 
