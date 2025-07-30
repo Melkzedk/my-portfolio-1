@@ -1,83 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | Melkzedek</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <nav>
-      <div class="logo"><i class="fas fa-user-astronaut"></i> My PortFolio</div>
-      <div class="hamburger" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
-        <li><a href="about.html"><i class="fas fa-user"></i> ABOUT</a></li>
-        <li><a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a></li>
-        <li><a href="education.html"><i class="fas fa-graduation-cap"></i> EDUCATION</a></li>
-        <li><a href="interest.html"><i class="fas fa-star"></i> INTERESTS</a></li>
-        <li><a href="contact.html"><i class="fas fa-envelope"></i> CONTACT</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="content-section">
-      <h1>Contact Me</h1>
-      <form action="#" method="post">
-        <div>
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Melkzedek</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <i class="fas fa-user-astronaut"></i> My PortFolio
         </div>
-        <div>
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" required />
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
         </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul class="quick-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="interest.html">Interests</a></li>
-          <li><a href="contact.html">Contact</a></li>
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+          </li>
+          <li>
+            <a href="about.html"><i class="fas fa-user"></i> ABOUT</a>
+          </li>
+          <li>
+            <a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a>
+          </li>
+          <li>
+            <a href="education.html"
+              ><i class="fas fa-graduation-cap"></i> EDUCATION</a
+            >
+          </li>
+          <li>
+            <a href="interest.html"><i class="fas fa-star"></i> INTERESTS</a>
+          </li>
+          <li>
+            <a href="contact.html"><i class="fas fa-envelope"></i> CONTACT</a>
+          </li>
         </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Follow Me</h3>
-        <div class="social-icons">
-          <a href="https://github.com/your-username" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://twitter.com/your-handle" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="mailto:your@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="content-section">
+        <h1>Contact Me</h1>
+        <form action="#" method="post">
+          <div>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="quick-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="interest.html">Interests</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Me</h3>
+          <div class="social-icons">
+            <a
+              href="https://github.com/your-username"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://linkedin.com/in/your-profile"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://twitter.com/your-handle"
+              target="_blank"
+              aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="mailto:your@email.com" aria-label="Email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
         </div>
       </div>
-    </div>
-    <p style="margin-top: 2rem">© 2025 Melkzedek | All rights reserved</p>
-  </footer>
+      <p style="margin-top: 2rem">© 2025 Melkzedek | All rights reserved</p>
+    </footer>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      nav.classList.toggle("show");
-    }
-  </script>
-</body>
+    <script>
+      function toggleMenu() {
+        const nav = document.getElementById("navLinks");
+        nav.classList.toggle("show");
+      }
+    </script>
+  </body>
 </html>
