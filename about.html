@@ -1,78 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | Melkzedek</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Melkzedek</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navLinks = document.querySelector(".nav-links");
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
 
-      menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
       });
-    });
-  </script>
-</head>
-<body>
-
-  <header>
-    <nav class="navbar">
-      <div class="logo"><i class="fas fa-user-astronaut"></i> My PortFolio</div>
-      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-      <ul class="nav-links">
-        <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
-        <li><a href="about.html"><i class="fas fa-user"></i> ABOUT</a></li>
-        <li><a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a></li>
-        <li><a href="education.html"><i class="fas fa-graduation-cap"></i> EDUCATION</a></li>
-        <li><a href="interest.html"><i class="fas fa-star"></i> INTERESTS</a></li>
-        <li><a href="contact.html"><i class="fas fa-envelope"></i> CONTACT</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="about" class="content-section">
-      <h1>About Me</h1>
-      <p>I'm Melkzedek, a passionate web developer who loves building clean and interactive user interfaces. I'm driven by the desire to solve real-world problems using technology and continuously learn new tools and practices that push my skills further.</p>
-
-      <h2>Educational Background</h2>
-      <p>I pursued a degree in Information and Communication Technology where I built a strong foundation in programming, networking, and system design. I also take online courses to keep my knowledge current with industry trends.</p>
-
-      <a href="assets/resume.pdf" download class="btn"><i class="fas fa-download"></i> Download My CV</a>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul class="quick-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="interest.html">Interests</a></li>
-          <li><a href="contact.html">Contact</a></li>
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fas fa-user-astronaut"></i> My PortFolio
+        </div>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+          </li>
+          <li>
+            <a href="about.html"><i class="fas fa-user"></i> ABOUT</a>
+          </li>
+          <li>
+            <a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a>
+          </li>
+          <li>
+            <a href="education.html"
+              ><i class="fas fa-graduation-cap"></i> EDUCATION</a
+            >
+          </li>
+          <li>
+            <a href="interest.html"><i class="fas fa-star"></i> INTERESTS</a>
+          </li>
+          <li>
+            <a href="contact.html"><i class="fas fa-envelope"></i> CONTACT</a>
+          </li>
         </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Follow Me</h3>
-        <div class="social-icons">
-          <a href="https://github.com/your-username" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://twitter.com/your-handle" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="mailto:your@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about" class="content-section">
+        <h1>About Me</h1>
+        <p>
+          I'm Melkzedek, a passionate web developer who loves building clean and
+          interactive user interfaces. I'm driven by the desire to solve
+          real-world problems using technology and continuously learn new tools
+          and practices that push my skills further.
+        </p>
+
+        <h2>Educational Background</h2>
+        <p>
+          I pursued a degree in Information and Communication Technology where I
+          built a strong foundation in programming, networking, and system
+          design. I also take online courses to keep my knowledge current with
+          industry trends.
+        </p>
+
+        <a href="assets/resume.pdf" download class="btn"
+          ><i class="fas fa-download"></i> Download My CV</a
+        >
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="quick-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="interest.html">Interests</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Me</h3>
+          <div class="social-icons">
+            <a
+              href="https://github.com/your-username"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://linkedin.com/in/your-profile"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://twitter.com/your-handle"
+              target="_blank"
+              aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="mailto:your@email.com" aria-label="Email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
         </div>
       </div>
-    </div>
-    <p style="margin-top: 2rem">© 2025 Melkzedek | All rights reserved</p>
-  </footer>
-
-</body>
+      <p style="margin-top: 2rem">© 2025 Melkzedek | All rights reserved</p>
+    </footer>
+  </body>
 </html>
