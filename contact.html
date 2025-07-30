@@ -5,245 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Melkzedek</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-    header {
-      background: #222;
-      padding: 1rem 2rem;
-      position: relative;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      color: white;
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-    }
-
-    .nav-links li {
-      margin-left: 1.5rem;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .hamburger span {
-      height: 3px;
-      width: 25px;
-      background: white;
-      margin-bottom: 5px;
-      border-radius: 5px;
-    }
-
-    .content-section {
-      max-width: 600px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .content-section h1 {
-      margin-bottom: 1.5rem;
-      text-align: center;
-      color: #222;
-    }
-
-    form div {
-      margin-bottom: 1rem;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 0.75rem;
-      background: #222;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-
-    .btn:hover {
-      background: #444;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: #222;
-      color: white;
-      margin-top: 2rem;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .footer-column h3 {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      color: #f0f0f0;
-    }
-
-    .footer-column ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .footer-column ul.quick-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    .footer-column ul.quick-links li {
-      flex: 1 1 30%;
-    }
-
-    .footer-column ul li a {
-      color: #bbb;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-
-    .footer-column ul li a:hover {
-      color: #fff;
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .social-icons a {
-      color: #bbb;
-      font-size: 1.2rem;
-      transition: color 0.3s;
-    }
-
-    .social-icons a:hover {
-      color: #fff;
-    }
-
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: #222;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        text-align: center;
-        z-index: 10;
-      }
-
-      .nav-links.show {
-        display: flex;
-      }
-
-      .nav-links li {
-        margin: 1rem 0;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-      <nav>
-        <div class="logo"><i class="fas fa-user-astronaut"></i> My PortFolio</div>
-        <div class="hamburger" onclick="toggleMenu()">
-          <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-links" id="navLinks">
-          <li>
-            <a href="index.html"><i class="fas fa-home"></i> HOME</a>
-          </li>
-          <li>
-            <a href="about.html"><i class="fas fa-user"></i> ABOUT</a>
-          </li>
-          <li>
-            <a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a>
-          </li>
-          <li>
-            <a href="education.html"
-              ><i class="fas fa-graduation-cap"></i> EDUCATION</a
-            >
-          </li>
-          <li>
-            <a href="interest.html"><i class="fas fa-star"></i> INTERESTS</a>
-          </li>
-          <li>
-            <a href="contact.html"><i class="fas fa-envelope"></i> CONTACT</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <nav>
+      <div class="logo"><i class="fas fa-user-astronaut"></i> My PortFolio</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> ABOUT</a></li>
+        <li><a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a></li>
+        <li><a href="education.html"><i class="fas fa-graduation-cap"></i> EDUCATION</a></li>
+        <li><a href="interest.html"><i class="fas fa-star"></i> INTERESTS</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <section class="content-section">
